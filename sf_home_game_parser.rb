@@ -1,16 +1,26 @@
 require 'csv'
 require 'time'
 
-str_format = "%D %R %p"
 
 
-CSV.foreach("./EventTicketPromotionPrice.csv", :headers => true) do |row|
-  timestring = row["START DATE"] + " " + row["START TIME"]
-  gametime = Time.strptime(timestring, str_format)
-  today = Time.now
-  today_onep = Time.new(today.year, today.month, today.day, 13, 00)
-  today_tenp = Time.new(today.year, today.month, today.day, 22, 00)
-  if (today_onep..today_tenp).cover?(gametime)
-    puts "Delay expected!"
+def is_game_today?
+  str_format = "%D %R %p"
+  game_today = false
+  CSV.foreach("./EventTicketPromotionPrice.csv", :headers => true) do |row|
+    timestring = row["START DATE"] + " " + row["START TIME"]
+    gametime = Time.strptime(timestring, str_format)
+    today = Time.now
+    today_onep = Time.new(today.year, today.month, today.day, 13, 00)
+    today_tenp = Time.new(today.year, today.month, today.day, 22, 00)
+    if (today_onep..today_tenp).cover?(gametime)
+      game_today = true
+    end
   end
+  return game_today
+end
+
+if is_game_today?
+  puts "There's a Giants home game today! Abandon all commute hope."
+else
+  puts "No Giants home game today! Your commute may face other dangers."
 end
