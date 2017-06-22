@@ -2,7 +2,6 @@ require 'csv'
 require 'time'
 
 
-
 def is_game_today?
   str_format = "%D %R %p"
   game_today = false
@@ -17,10 +16,4 @@ def is_game_today?
     end
   end
   return game_today
-end
-
-if is_game_today?
-  puts "There's a Giants home game today! Abandon all commute hope."
-else
-  puts "No Giants home game today! Your commute may face other dangers."
 end
