@@ -2,9 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Commute Helper</title>
-  </head>
-  <body>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commute Helper</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
+</head>
+<body>
     <h1>
       Commute Helper
     </h1>
@@ -13,9 +23,17 @@
     <br>
     <br>
     <br>
-    <h2>
-      East Bay alerts
-    </h2>
+    <div class="bs-example">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">East Bay</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>
     <!-- Bart alerts -->
         <a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" href="https://twitter.com/SFBARTalert">Tweets by SFBARTalert</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!-- MUNI alerts -->
@@ -24,26 +42,48 @@
     <!-- East Bay Traffic alerts -->
         <a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3ATotalTrafficSF%2024%20OR%20580%20OR%20880%20OR%2080" data-widget-id="879155393464750080">Tweets about from:TotalTrafficSF 24 OR 580 OR 880 OR 80</a>
               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  </p>
+                </div>
+                  </div>
+                        </div>
+                        <div class="panel panel-default">
+                                   <div class="panel-heading">
+                                       <h4 class="panel-title">
+                                           <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">South Bay</a>
+                                       </h4>
+                                   </div>
+                                   <div id="collapseTwo" class="panel-collapse collapse">
+                                       <div class="panel-body">
 
-    <h2>
-      South Bay alerts
-    </h2>
     <!-- Caltrain alerts -->
         <a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3Acaltrain%20-RT" data-widget-id="877703887389548547">Tweets about from:caltrain -RT</a>
               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     <!-- South Bay Traffic alerts -->
       <a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3Atotaltrafficsf%20101%20OR%20280" data-widget-id="879156180303495168">Tweets about from:totaltrafficsf 101 OR 280</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </p>
+          </div>
+          </div>
+          </div>
 
-    <h2>
-      San Francisco  alerts
-    </h2>
+          <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <h4 class="panel-title">
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">San Francisco</a>
+                          </h4>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse">
+                          <div class="panel-body">
     <!-- Bart alerts -->
         <a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" href="https://twitter.com/SFBARTalert">Tweets by SFBARTalert</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!-- MUNI alerts -->
       <a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" data-dnt="true" href="https://twitter.com/search?q=from%3Asfmta_muni%20ATTN%20OR%20UPDATE" data-widget-id="879157338917044224">Tweets about from:sfmta_muni ATTN OR UPDATE</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
+        </p>
+        </div>
+        </div>
+        </div>
+        </div>
 
   </body>
 </html>
