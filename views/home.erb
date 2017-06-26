@@ -18,22 +18,22 @@
     <h1>
       Commute Helper
     </h1>
-    <p> <%= @giants_status %></p>
+    <p>We're here to help make your commute more intelligible, if not easier!</p>
+    <p>
+
     <br>
-    <br>
-    <br>
-    <br>
-    <div class="bs-example">
+
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">East Bay</a>
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">To/From East Bay</a>
                 </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in">
+            <div id="collapseOne" class="panel-collapse collapse">
                 <div class="panel-body">
                     <p>
+    <p> <%= @giants_status %></p>
     <!-- Bart alerts -->
         <a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" href="https://twitter.com/SFBARTalert">Tweets by SFBARTalert</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!-- MUNI alerts -->
@@ -49,12 +49,12 @@
                         <div class="panel panel-default">
                                    <div class="panel-heading">
                                        <h4 class="panel-title">
-                                           <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">South Bay</a>
+                                           <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">To/From South Bay</a>
                                        </h4>
                                    </div>
                                    <div id="collapseTwo" class="panel-collapse collapse">
                                        <div class="panel-body">
-
+    <p><%= @giants_status %></p>
     <!-- Caltrain alerts -->
         <a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3Acaltrain%20-RT" data-widget-id="877703887389548547">Tweets about from:caltrain -RT</a>
               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -69,11 +69,12 @@
           <div class="panel panel-default">
                       <div class="panel-heading">
                           <h4 class="panel-title">
-                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">San Francisco</a>
+                              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Within San Francisco</a>
                           </h4>
                       </div>
                       <div id="collapseThree" class="panel-collapse collapse">
                           <div class="panel-body">
+    <p> <%= @giants_status %></p>
     <!-- Bart alerts -->
         <a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" href="https://twitter.com/SFBARTalert">Tweets by SFBARTalert</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <!-- MUNI alerts -->
