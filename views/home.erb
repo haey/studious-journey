@@ -15,33 +15,43 @@
 </style>
 </head>
 <body>
-    <h1>
-      The Perkins-Fenster Commutesplainer
-    </h1>
-    <h4><i>We're here to help make your commute more intelligible, if not easier!</i></h4>
-    <p>
-
+    <!-- <div class="container">
+      <div class="row justify-content-md-center"> -->
+      <div align="center">
+        <h1>
+          The Perkins-Fenster Commutesplainer
+        </h1>
+        <h4><i>We're here to help make your commute more intelligible, if not easier!</i></h4>
+      </div>
+        <p>
     <br>
 
     <div class="panel-group" id="accordion">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h4 class="panel-title">
+                <h2 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">To/From East Bay</a>
-                </h4>
+                </h2>
             </div>
             <div id="collapseOne" class="panel-collapse collapse">
                 <div class="panel-body">
-                    <p>
-    <p> <%= @giants_status %></p>
+
+            <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+            <div class="container">
+            <div class="row">
+          	<div class="alert alert-info" role="alert">
+            <strong><i class="fa fa-warning"></i> Giants Game Status:</strong> <marquee><p style="font-family: arial; font-size: 18pt"><%= @giants_status %></p></marquee>
+              </div>
+              	</div>
+                  </div>
     <!-- Bart alerts -->
-        <a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" href="https://twitter.com/SFBARTalert">Tweets by SFBARTalert</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="col-md-4"><h3><font color="31708f"><p class="bg-info">Bart Status</p></font></h3><a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" href="https://twitter.com/SFBARTalert" data-chrome="noheader nofooter noborders transparent">Tweets by SFBARTalert</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
     <!-- MUNI alerts -->
-        <a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3Asfmta_muni%20ATTN%20OR%20UPDATE" data-widget-id="879157338917044224">Tweets about from:sfmta_muni ATTN OR UPDATE</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <div class="col-md-4"><h3><font color="31708f"><p class="bg-info">Muni Status</p></font></h3><a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3Asfmta_muni%20ATTN%20OR%20UPDATE" data-widget-id="879157338917044224" data-chrome="noheader nofooter noborders transparent">Tweets about from:sfmta_muni ATTN OR UPDATE</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
     <!-- East Bay Traffic alerts -->
-        <a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3ATotalTrafficSF%2024%20OR%20580%20OR%20880%20OR%2080" data-widget-id="879155393464750080">Tweets about from:TotalTrafficSF 24 OR 580 OR 880 OR 80</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <div class="col-md-4"><h3><font color="31708f"><p class="bg-info">East Bay Traffic Status</p></font></h3><a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3ATotalTrafficSF%2024%20OR%20580%20OR%20880%20OR%2080" data-widget-id="879155393464750080" data-chrome="noheader nofooter noborders transparent">Tweets about from:TotalTrafficSF 24 OR 580 OR 880 OR 80</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
                   </p>
                 </div>
                   </div>
@@ -54,13 +64,12 @@
                                    </div>
                                    <div id="collapseTwo" class="panel-collapse collapse">
                                        <div class="panel-body">
-    <p><%= @giants_status %></p>
     <!-- Caltrain alerts -->
-        <a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3Acaltrain%20-RT" data-widget-id="877703887389548547">Tweets about from:caltrain -RT</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <div class="col-md-4"><h3><font color="31708f"><p class="bg-info">Caltrain Status</p></font></h3><a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3Acaltrain%20-RT%20exclude%3Areplies" data-widget-id="879495445008875521" data-chrome="noheader nofooter noborders transparent" >Tweets about from:caltrain -RT exclude:replies</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
     <!-- South Bay Traffic alerts -->
-      <a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3Atotaltrafficsf%20101%20OR%20280" data-widget-id="879156180303495168">Tweets about from:totaltrafficsf 101 OR 280</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div class="col-md-4"><h3><font color="31708f"><p class="bg-info">South Bay Traffic Status</p></font></h3><a class="twitter-timeline" data-tweet-limit="5" data-width=450 data-height=550 data-dnt="true" href="https://twitter.com/search?q=from%3Atotaltrafficsf%20101%20OR%20280" data-widget-id="879156180303495168" data-chrome="noheader nofooter noborders transparent">Tweets about from:totaltrafficsf 101 OR 280</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
           </p>
           </div>
           </div>
@@ -74,12 +83,21 @@
                       </div>
                       <div id="collapseThree" class="panel-collapse collapse">
                           <div class="panel-body">
-    <p> <%= @giants_status %></p>
+            <p>
+            <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+                            <div class="container">
+                            <div class="row">
+                            <div class="alert alert-info" role="alert">
+                            <strong><i class="fa fa-warning"></i> Giants Game Status:</strong> <marquee> <p style="font-family: arial; font-size: 18pt"><%= @giants_status %></p></marquee>
+                              </div>
+                                </div>
+                                  </div>
+
     <!-- Bart alerts -->
-        <a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" href="https://twitter.com/SFBARTalert">Tweets by SFBARTalert</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div class="col-md-4"><h3><font color="31708f"><p class="bg-info">Bart Status</p></font></h3><a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" href="https://twitter.com/SFBARTalert" data-chrome="noheader nofooter noborders transparent">Tweets by SFBARTalert</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
     <!-- MUNI alerts -->
-      <a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" data-dnt="true" href="https://twitter.com/search?q=from%3Asfmta_muni%20ATTN%20OR%20UPDATE" data-widget-id="879157338917044224">Tweets about from:sfmta_muni ATTN OR UPDATE</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      <div class="col-md-4"><h3><font color="31708f"><p class="bg-info">Muni Status</p></font></h3><a class="twitter-timeline" data-width=450 data-height=550 data-tweet-limit="5" data-dnt="true" href="https://twitter.com/search?q=from%3Asfmta_muni%20ATTN%20OR%20UPDATE" data-widget-id="879157338917044224" data-chrome="noheader nofooter noborders transparent">Tweets about from:sfmta_muni ATTN OR UPDATE</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
         </p>
         </div>
         </div>
